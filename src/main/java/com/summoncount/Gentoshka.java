@@ -124,7 +124,6 @@ public class Gentoshka extends IronGolem {
 
         this.getNavigation().stop();
         this.setDeltaMovement(new Vec3(motionX, 1.1D, motionZ));
-        this.hasImpulse = true;
         this.slamming = true;
         this.slamTicks = 0;
     }

@@ -100,7 +100,7 @@ public class SummonCountMod {
         for (int x = 0; x < pattern.getWidth(); x++) {
             for (int y = 0; y < pattern.getHeight(); y++) {
                 BlockInWorld block = match.getBlock(x, y, 0);
-                level.setBlock(block.getPos(), Blocks.AIR.defaultBlockState(), 2);
+                level.setBlock(block.getPos(), Blocks.AIR.defaultBlockState(), 3);
                 level.levelEvent(2001, block.getPos(), Block.getId(block.getState()));
             }
         }
@@ -110,12 +110,6 @@ public class SummonCountMod {
         Gentoshka boss = new Gentoshka(GENTOSHKA.get(), level);
         boss.setPos(spawnPos.getX() + 0.5D, spawnPos.getY() + 0.05D, spawnPos.getZ() + 0.5D);
         level.addFreshEntity(boss);
-
-        for (int x = 0; x < pattern.getWidth(); x++) {
-            for (int y = 0; y < pattern.getHeight(); y++) {
-                level.blockUpdated(match.getBlock(x, y, 0).getPos(), Blocks.AIR);
-            }
-        }
     }
 
     // ------------------------------------------------------------------ /summon with count
